@@ -1,7 +1,12 @@
 import SelectCountry from "@/app/_components/SelectCountry";
 import Image from "next/image";
+import React from "react";
 
-export default function Page() {
+export const metadata = {
+	title: "Update Profile",
+};
+
+const Profile = () => {
 	// CHANGE
 	const countryFlag = "pt.jpg";
 	const nationality = "portugal";
@@ -39,12 +44,13 @@ export default function Page() {
 						<label htmlFor="nationality">
 							Where are you from?
 						</label>
-						<Image
+						{/* <Image
 							width={25}
+							height={25}
 							src={countryFlag}
 							alt="Country flag"
 							className="h-5 rounded-sm"
-						/>
+						/> */}
 					</div>
 
 					<SelectCountry
@@ -73,4 +79,6 @@ export default function Page() {
 			</form>
 		</div>
 	);
-}
+};
+
+export default Profile;

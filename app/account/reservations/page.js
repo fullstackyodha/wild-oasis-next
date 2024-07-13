@@ -1,7 +1,11 @@
-import ReservationCard from "./ReservationCard";
+import ReservationCard from "@/app/_components/ReservationCard";
+import React from "react";
 
-export default function Page() {
-	// CHANGE
+export const metadata = {
+	title: "Reservations",
+};
+
+const Reservations = () => {
 	const bookings = [];
 
 	return (
@@ -31,4 +35,6 @@ export default function Page() {
 			)}
 		</div>
 	);
-}
+};
+
+export default Reservations;
